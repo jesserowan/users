@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Add user</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>User Index</h1>
+    </div>
+    <div class="topbar">
+        <a id="home" class="btn btn-secondary" href="/">Home</a>
+    </div>
+    <div class="main">
+        <form action="/add_user" method="POST">
+            <div class="form-group form">
+                <h2>Create a New User</h2>
+                <label class="form-group">First name</label>
+                <input class="form-control" type="text" name="first" placeholder="e.g. Jane">
+                <label class="form-group">Last name</label>
+                <input class="form-control" type="text" name="last" placeholder="e.g. Doe">
+                <label class="form-group">Email address</label>
+                <input class="form-control" type="text" name="email" placeholder="e.g. janedoe@gmail.com">
+                <input class="btn btn-secondary btn-block" type="submit" value="Create User">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

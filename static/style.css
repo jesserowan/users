@@ -1,0 +1,58 @@
+* {
+    margin: 0px auto;
+}
+
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    background-image: linear-gradient(grey, darkgrey)
+}
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+h2 {
+    font-size: 24px;
+    margin: 0px auto;
+}
+.form {
+    width: 250px;
+    border: 2px solid grey;
+    padding: 10px 10px 30px 10px;
+    border-radius: 5px;
+}
+.form-group {
+    margin: 20px 0px 0px 0px;
+}
+.btn {
+    margin-top: 20px;
+}
+.topbar {
+    width: 90%;
+}
+#home {
+    width: 10%;
+    margin-left: 90%;
+}
+table {
+    margin-top: 20px;
+}
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+.user_info {
+    width: 350px;
+    border: 2px solid grey;
+    padding: 10px 10px 30px 10px;
+    border-radius: 5px;
+}
+#a {
+    margin-bottom: 20px;
+}
+.edit {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}

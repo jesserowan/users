@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Edit User</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>User Index</h1>
+    </div>
+    <div class="topbar">
+        <a id="home" class="btn btn-secondary" href="/">Home</a>
+    </div>
+    <div class="user_info">
+        <form action="/process_edit/{{edit[0]['id']}}" method="POST">
+            <h2 id="a">Edit User {{ edit[0]['id'] }}</h2>
+            <p class="edit">First Name</p>
+            <input class="form-control" type="text" name="editfirst" value="{{edit[0]['first_name']}}">
+            <p class="edit">Last Name</p>
+            <input class="form-control" type="text" name="editlast" value="{{edit[0]['last_name']}}">
+            <p class="edit">Email</p>
+            <input class="form-control" type="text" name="editemail" value="{{edit[0]['email']}}">
+            <p class="edit">Last updated: {{edit[0]['updated_at']}}</p>
+            <input class="btn btn-secondary btn-block" type="submit" value="Edit User">
+            <br>
+            <a href="/delete_user/{{ edit[0]['id'] }}">Delete</a>
+        </form>
+    </div>
+</body>
+</html>
